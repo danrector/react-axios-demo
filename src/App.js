@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
-var axios = require('axios');
+import axios from 'axios';
 
 class App extends Component {
   constructor() {
