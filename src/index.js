@@ -4,4 +4,4 @@ import App from './App';
 import './index.css';
 
 ReactDOM.render(
-  <App source="http://codepen.io/jobs.json" />, document.querySelector("#root"));
+  <App source="https://api.getchute.com/v2/albums/aus6kwrg/assets?" />, document.querySelector("#root"));

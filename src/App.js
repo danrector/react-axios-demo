@@ -7,7 +7,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-        jobs: []
+        pics: []
     };
   }
   
@@ -18,9 +18,11 @@ class App extends Component {
       axios.get(this.props.source)
         .then(function(result) {    
           th.setState({
-            jobs: result.data.jobs
+            pics: result.data
           });
         })
+
+        console.log(th);
   }
   
   componentWillUnmount() {
@@ -31,16 +33,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Jobs!</h1>
+        <h1>Pics!</h1>
         {/* Don't have an ID to use for the key, URL work ok? */}
-        {this.state.jobs.map(function(job) {
+        {this.state.pics.map(function(job) {
           return (
             <div key={job.url} className="job">
               <a href={job.url}>
-                {job.company_name}
-                is looking for a 
-                {job.term}
-                {job.title}
               </a>
             </div>
           );
