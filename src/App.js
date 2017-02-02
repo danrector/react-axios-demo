@@ -21,6 +21,8 @@ class App extends Component {
             jobs: result.data.jobs
           });
         })
+
+        console.log(th);
   }
   
   componentWillUnmount() {
